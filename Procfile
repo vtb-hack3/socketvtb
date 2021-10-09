@@ -1,0 +1,1 @@
+web: gunicorn --bind :$PORT -k eventlet -w 1 --reload search:app
