@@ -11,6 +11,8 @@ dotenv_file = ".env"
 if os.path.isfile(dotenv_file):
     dotenv.load_dotenv(dotenv_file)
 
+DATABASE_URL = os.getenv('DATABASE_URL')
+
 r = redis.Redis(
     host=os.getenv('redis_host'),
     port=os.getenv('redis_port'),

@@ -1,12 +1,12 @@
-import os
 import psycopg2
 import logging
 from urllib.parse import urlparse
 
+from config import DATABASE_URL
+
 
 def connect_to_db():
-    db_url = os.getenv("DATABASE_URL")
-    result = urlparse(db_url)
+    result = urlparse(DATABASE_URL)
     try:
         conn = psycopg2.connect(
             dbname=result.path[1:],
