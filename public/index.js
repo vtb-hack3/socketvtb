@@ -20,6 +20,7 @@ sio.on('search_count', (count) => {
 });
 
 sio.on('found_game', (data) => {
+  alert('game_found')
   console.log('game id: ' + data['room_id']);
 });
 

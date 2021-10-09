@@ -15,3 +15,6 @@ uvicorn==0.13.2
 uvloop==0.14.0
 watchgod==0.6
 websockets==8.1
+psycopg2-binary
+redis
+ipython
